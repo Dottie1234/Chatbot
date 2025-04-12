@@ -116,27 +116,6 @@ if __name__ == "__main__":
 '''
 prefect server start
 
-PREFECT_API_URL=http://127.0.0.1:4200/api prefect work-pool create --type process frontier-pool
-
-prefect work-pool create frontier-pool --type process
-
-prefect deploy frontier_pipeline.py:frontierpipeline --name daily-frontier --pool frontier-pool --cron "0 0 * * *"
-
-prefect worker start --pool frontier-pool
-
-prefect deployment run frontierpipeline/daily-frontier
-
-prefect flow-run ls
-'''
+run the script and create a work pool
 
 '''
-python deployment.py
-prefect worker start -p default
-
-To run on demand
-prefect deployment run frontier_pipeline/frontier-scheduled-deployment
-
-
-
-'''
-
